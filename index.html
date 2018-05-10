@@ -2,20 +2,17 @@
 
 <head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-    <script src="touch-controls.js"></script>
+    <script src="aframe-extras.min.js"></script>
+    <script src="movement-controls.js"></script>
 </head>
 
 <body>
     <a-scene>
-        <a-assets>
-        </a-assets>
         <a-entity id="rig"
           movement-controls
           position="0 0 1">
-  <a-entity camera
-            position="0 1.6 0"
-            look-controls="pointerLockEnabled: true"></a-entity>
-</a-entity>
+            <a-entity camera position="0 1.6 0" speed="0.05" look-controls="pointerLockEnabled: true"></a-entity>
+        </a-entity>
 
         <a-light type="point" position="0 4 0" decay="0.19" distance="6.31" intensity="1.5"></a-light>
         <a-light type="ambient" color="#fff" decay="1.0" intensity="0.76"></a-light>
