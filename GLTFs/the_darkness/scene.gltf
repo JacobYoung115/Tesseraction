@@ -1,0 +1,361 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4085,
+      "max": [
+        264.42877197265625,
+        180.8043212890625,
+        397.93777465820312
+      ],
+      "min": [
+        228.24636840820312,
+        120.50016784667969,
+        356.54638671875
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 49020,
+      "componentType": 5126,
+      "count": 4085,
+      "max": [
+        0.99163389205932617,
+        0.97015172243118286,
+        0.95773178339004517
+      ],
+      "min": [
+        -0.99656581878662109,
+        -0.93719565868377686,
+        -0.99847972393035889
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4085,
+      "max": [
+        0.93666815757751465,
+        0.99600094556808472,
+        0.99720311164855957,
+        1
+      ],
+      "min": [
+        -0.99262869358062744,
+        -0.99945598840713501,
+        -0.99956411123275757,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 65360,
+      "componentType": 5126,
+      "count": 4085,
+      "max": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "min": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 5799,
+      "max": [
+        4084
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 98040,
+      "componentType": 5126,
+      "count": 2251,
+      "max": [
+        254.32624816894531,
+        177.66213989257812,
+        384.42779541015625
+      ],
+      "min": [
+        216.852294921875,
+        145.38937377929688,
+        336.55197143554688
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 125052,
+      "componentType": 5126,
+      "count": 2251,
+      "max": [
+        0.91993910074234009,
+        0.67297351360321045,
+        0.96712154150009155
+      ],
+      "min": [
+        -0.9403260350227356,
+        -0.60698884725570679,
+        -0.99589622020721436
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 130720,
+      "componentType": 5126,
+      "count": 2251,
+      "max": [
+        0.91741204261779785,
+        0.99986106157302856,
+        0.9297369122505188,
+        -1
+      ],
+      "min": [
+        -0.9960629940032959,
+        -0.99994659423828125,
+        -0.73750638961791992,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 166736,
+      "componentType": 5126,
+      "count": 2251,
+      "max": [
+        0.99215686321258545,
+        0.9843137264251709,
+        0.9843137264251709,
+        1
+      ],
+      "min": [
+        0.83921569585800171,
+        0.83921569585800171,
+        0.5215686559677124,
+        0.7450980544090271
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 23196,
+      "componentType": 5125,
+      "count": 3177,
+      "max": [
+        2250
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "jrby1015 (https://sketchfab.com/jrby1015)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/models/8376904c23f84492bf989a7b8d41e53f",
+      "title": "The Darkness"
+    },
+    "generator": "Sketchfab-3.20.8",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 35904,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 152064,
+      "byteOffset": 35904,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 202752,
+      "byteOffset": 187968,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 390720,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "d90c6ad8af0f4b54b422e0f92abe1b3c_TaperedMarker",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ],
+      "name": "2241cd328ba248a59ee72caef7e9ed62_Light",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "The_Darkness_d90c6ad8af0f4b54b422e0f92abe1b3c_TaperedMarker_0",
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 3,
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "The_Darkness_2241cd328ba248a59ee72caef7e9ed62_Light_0",
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 8,
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "247c9f378d174df083b4a2691b9b8548.fbx"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5,
+        6
+      ],
+      "name": "The_Darkness"
+    },
+    {
+      "mesh": 0,
+      "name": "The_Darkness_d90c6ad8af0f4b54b422e0f92abe1b3c_TaperedMarker_0"
+    },
+    {
+      "mesh": 1,
+      "name": "The_Darkness_2241cd328ba248a59ee72caef7e9ed62_Light_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+
