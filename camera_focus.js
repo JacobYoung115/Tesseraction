@@ -1,5 +1,8 @@
 AFRAME.registerComponent('camera_focus', {
     init: function() {
+        let inPosition = false;
+        let audio = null;
+
         this.el.addEventListener('raycaster-intersected', function(evt) {
             let targetElement = evt.target;
             if (targetElement.id !== 'robot') {
@@ -10,9 +13,13 @@ AFRAME.registerComponent('camera_focus', {
                 return posObject.x + " " + posObject.y + " " + posObject.z;
             }
 
+            if (inPosition) {
+                return ;
+            }
+
             const cursorElement = document.querySelector('#cursor');
 
-
+            audio = new Audio('audio/The\ Last\ Supper.mp3')
             const movingTimeout = setTimeout(function() {
                 let cameraElement = document.querySelector('#rig');
 
@@ -26,6 +33,9 @@ AFRAME.registerComponent('camera_focus', {
                     const opacityVal = e.classList.contains('faded') ? 0.5: 1;
                     e.setAttribute('animation', `property: opacity; from: 0; to: ${opacityVal}; dur: 1500`);
                 }), 800);
+
+                inPosition = true;
+                audio.play();
             }, 3000)
 
             cursorElement.setAttribute('animation', 'property: scale; from: 1 1 1; to: 5 5 5; dur: 3000')
@@ -56,6 +66,11 @@ AFRAME.registerComponent('camera_focus', {
                }
 
                e.setAttribute('animation', 'property: opacity; from: 1; to: 0; dur: 0');
+               inPosition = false;
+               if (audio) {
+                   audio.pause();
+                   audio = null;
+               }
            });
         });
     },
@@ -65,6 +80,5 @@ AFRAME.registerComponent('camera_focus', {
 })
 
 function play() {
-    var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
-    audio.play();
+    audio.play().then(_ => {});
   }
