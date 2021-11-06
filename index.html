@@ -3,6 +3,7 @@
 <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/urish/aframe-camera-events/master/index.js"></script>
     <script src="camera_focus.js"></script>
     <link rel="shortcut icon" href="./favicon_hexagon_large.ico">
 </head>
@@ -11,9 +12,11 @@
     <a-scene cursor="rayOrigin: mouse">
         <a-entity id="rig"
           movement-controls
-          position="0 0 1">
+          position="0 0 1"
+          position-listener
+          rotation-listener>
             <a-entity id="camera" camera position="0 1.6 0" speed="0.05" look-controls="pointerLockEnabled: true">
-                <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000"></a-cursor>
+                <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000" material="color: cyan"></a-cursor>
             </a-entity>
         </a-entity>
 
