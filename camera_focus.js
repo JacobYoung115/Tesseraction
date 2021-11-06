@@ -24,15 +24,18 @@ AFRAME.registerComponent('camera_focus', {
                 let cameraElement = document.querySelector('#rig');
 
                 let camPos = objectToPos(cameraElement.getAttribute('position'))
-                let targetPos = "7.18 0 1.5";
+                let targetPos = "6.5 0 1.5";
                 cursorElement.setAttribute('animation', 'property:scale; from: 5 5 5; to: 1 1 1; dur: 0');
 
                 cameraElement.setAttribute('animation', `property:position; from: ${camPos}; to: ${targetPos}; dur:701`);
 
-                setTimeout(() => document.querySelectorAll(".showOnFocus").forEach(e => {
-                    const opacityVal = e.classList.contains('faded') ? 0.5: 1;
-                    e.setAttribute('animation', `property: opacity; from: 0; to: ${opacityVal}; dur: 1500`);
-                }), 800);
+                setTimeout(() => {
+                    document.querySelectorAll(".showOnFocus").forEach(e => {
+                        const opacityVal = e.classList.contains('faded') ? 0.5: 1;
+                        e.setAttribute('animation', `property: opacity; from: 0; to: ${opacityVal}; dur: 1500`);
+                    });
+                    cursorElement.setAttribute('visible', "false");
+                }, 800);
 
                 inPosition = true;
                 audio.play();
@@ -60,6 +63,9 @@ AFRAME.registerComponent('camera_focus', {
 
         const cameraRig = document.querySelector("#rig");
         cameraRig.addEventListener('positionChanged', function () {
+            document.querySelector('#cursor')
+              .setAttribute('visible', 'true');
+
            document.querySelectorAll('.showOnFocus').forEach(e => {
                if (e.getAttribute('opacity') === "0") {
                    return ;
