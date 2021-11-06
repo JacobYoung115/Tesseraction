@@ -13,7 +13,7 @@
         <a-entity id="rig"
           movement-controls
           position="0 0 1">
-            <a-entity camera position="0 1.6 0" speed="0.05" look-controls="pointerLockEnabled: true">
+            <a-entity id="camera" camera position="0 1.6 0" speed="0.05" look-controls="pointerLockEnabled: true">
                 <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000"></a-cursor>
             </a-entity>
         </a-entity>
@@ -46,7 +46,7 @@
         <a-gltf-model src="./GLTFs/fw1/scene.gltf" scale="0.01 0.01 0.01" ></a-gltf-model>
         <a-gltf-model src="./GLTFs/fw2/scene.gltf" scale="0.01 0.01 0.01" ></a-gltf-model>
         <a-gltf-model src="./GLTFs/fw3/scene.gltf" scale="0.01 0.01 0.01" ></a-gltf-model>
-        <a-gltf-model src="./GLTFs/glitch1/scene.gltf" scale="0.01 0.01 0.01" camera_focus></a-gltf-model>
+        <a-gltf-model src="./GLTFs/glitch1/scene.gltf" scale="0.01 0.01 0.01" position="1 1 1" camera_focus></a-gltf-model>
         <a-gltf-model src="./GLTFs/glitch2/scene.gltf" scale="0.01 0.01 0.01" camera_focus></a-gltf-model>
         <a-gltf-model src="./GLTFs/glitch3/scene.gltf" scale="0.01 0.01 0.01" camera_focus></a-gltf-model>
 
