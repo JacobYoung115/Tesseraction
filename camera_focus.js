@@ -11,6 +11,8 @@ AFRAME.registerComponent('camera_focus', {
             }
 
             const cursorElement = document.querySelector('#cursor');
+
+
             const movingTimeout = setTimeout(function() {
                 let cameraElement = document.querySelector('#rig');
 
@@ -19,6 +21,11 @@ AFRAME.registerComponent('camera_focus', {
                 cursorElement.setAttribute('animation', 'property:scale; from: 5 5 5; to: 1 1 1; dur: 0');
 
                 cameraElement.setAttribute('animation', `property:position; from: ${camPos}; to: ${targetPos}; dur:701`);
+
+                setTimeout(() => document.querySelectorAll(".showOnFocus").forEach(e => {
+                    const opacityVal = e.classList.contains('faded') ? 0.5: 1;
+                    e.setAttribute('animation', `property: opacity; from: 0; to: ${opacityVal}; dur: 1500`);
+                }), 800);
             }, 3000)
 
             cursorElement.setAttribute('animation', 'property: scale; from: 1 1 1; to: 5 5 5; dur: 3000')
@@ -39,7 +46,18 @@ AFRAME.registerComponent('camera_focus', {
             }
             cameraRig.addEventListener('positionChanged', timeoutCancelerListener);
             cameraElement.addEventListener('rotationChanged', timeoutCancelerListener);
-        })
+        });
+
+        const cameraRig = document.querySelector("#rig");
+        cameraRig.addEventListener('positionChanged', function () {
+           document.querySelectorAll('.showOnFocus').forEach(e => {
+               if (e.getAttribute('opacity') === "0") {
+                   return ;
+               }
+
+               e.setAttribute('animation', 'property: opacity; from: 1; to: 0; dur: 0');
+           });
+        });
     },
     remove: function() {
         this.el.removeEventListener('click', this.el.getAttribute('position'));
