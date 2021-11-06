@@ -13,9 +13,8 @@
         <a-entity id="rig"
           movement-controls
           position="0 0 1"
-          position-listener
-          rotation-listener>
-            <a-entity id="camera" camera position="0 1.6 0" speed="0.05" look-controls="pointerLockEnabled: true">
+          position-listener>
+            <a-entity id="camera" camera position="0 1.6 0" speed="0.05" look-controls="pointerLockEnabled: true" rotation-listener>
                 <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000" material="color: cyan"></a-cursor>
             </a-entity>
         </a-entity>

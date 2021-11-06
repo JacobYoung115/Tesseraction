@@ -23,13 +23,22 @@ AFRAME.registerComponent('camera_focus', {
 
             cursorElement.setAttribute('animation', 'property: scale; from: 1 1 1; to: 5 5 5; dur: 3000')
 
-            const cameraElement = document.querySelector('#rig');
-            cameraElement.addEventListener('positionChanged',
-              function timeoutCancelerListener() {
-                  clearTimeout(movingTimeout);
-                  cameraElement.removeEventListener('positionChanged', timeoutCancelerListener);
-                  cursorElement.setAttribute('animation', 'property:scale; from: 5 5 5; to: 1 1 1; dur: 0');
-              });
+            const cameraRig = document.querySelector('#rig');
+            const cameraElement = document.querySelector('#camera');
+
+            function timeoutCancelerListener(evt) {
+                // if it's still within the boundaries of the object don't cancel
+                if (cursorElement.components.raycaster.getIntersection(targetElement)) {
+                    return ;
+                }
+
+                clearTimeout(movingTimeout);
+                cameraRig.removeEventListener('positionChanged', timeoutCancelerListener);
+                cameraElement.removeEventListener('rotationChanged', timeoutCancelerListener);
+                cursorElement.setAttribute('animation', 'property:scale; from: 5 5 5; to: 1 1 1; dur: 0');
+            }
+            cameraRig.addEventListener('positionChanged', timeoutCancelerListener);
+            cameraElement.addEventListener('rotationChanged', timeoutCancelerListener);
         })
     },
     remove: function() {
