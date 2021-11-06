@@ -19,6 +19,31 @@
             </a-entity>
         </a-entity>
 
+        <a-assets>
+            <img id="davinci" src="assets/davinci.jpg">
+        </a-assets>
+
+        <a-plane color="#CCC" height="1.2" width="0.7"  position="7.8 1.7 0.7" rotation="0 -30 0"
+                 class="showOnFocus faded" opacity="0"></a-plane>
+
+        <a-text position="7.7 1.7 0.8" rotation="0 -30 0" wrap-count="15" class="showOnFocus"
+                anchor="center" width="0.5" color="white" opacity="0"
+                value="The Last Supper (1595-1498) by Leonardo da Vinci housed by the refectory of the Convent of Santa Maria delle Grazie in Milan.
+                The Last Supper portrays the reaction given by each apostle when Jesus said one of them would betray him">
+        </a-text>
+
+        <a-curvedimage src="#davinci" radius="7" theta-length="15" position="7.2 2.1 0.35" class="showOnFocus"
+                       opacity="0"
+                       rotation="0 0 0" scale="0.3 0.3 0.3"></a-curvedimage>
+
+        <a-plane color="#CCC" height="1.2" width="1"  position="7.4 1.6 2.51" rotation="0 -180 0"
+                 class="showOnFocus faded" opacity="0.5"></a-plane>
+
+        <a-text position="7.6 1.6 2.5" rotation="0 -180 0" wrap-count="15" class="showOnFocus"
+                anchor="center" width="0.5" color="white" opacity="0"
+                value="Leonardo da Vinci (15 April 1452 – 2 May 1519) was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor and architect">
+        </a-text>
+
         <a-light type="point" position="0 4 0" decay="0.19" distance="6.31" intensity="1.5"></a-light>
         <a-light type="ambient" color="#fff" decay="1.0" intensity="0.76"></a-light>
 
